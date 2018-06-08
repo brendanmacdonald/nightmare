@@ -2,17 +2,20 @@ const Nightmare = require('nightmare')
 const expect = require('chai').expect
 const obj = require('../utils/page_objects')
 
-describe('Load a Page', function () {
+describe('Mobile Emulation', function () {
     this.timeout('5s')
 
     let nightmare = null
     beforeEach(() => {
-        nightmare = new Nightmare()
+        nightmare = new Nightmare({
+            show: true
+        })
     })
 
     describe('/ (Home Page)', () => {
-        it('should load without error', done => {
+        it('viewport set to iPhone X dimensions', done => {
             nightmare
+            .viewport(375,812)
                 .goto(obj.baseURL)
                 .title()
                 .end()

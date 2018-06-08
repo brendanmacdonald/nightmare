@@ -1,15 +1,14 @@
 const Nightmare = require('nightmare')
+const obj = require('../utils/page_objects')
 
 main().catch(console.error)
 
 async function main() {
   const nightmare = Nightmare({ show: false, gotoTimeout: 1200000 })
-  const pageurl = 'https://www.bbc.co.uk/'
 
-  console.time('goto')
-  await nightmare.goto(pageurl)
-  console.timeEnd('goto')
-  console.log(await nightmare.title())
+  console.time('Time to go to BBC News')
+  await nightmare.goto(obj.baseURL)
+  console.timeEnd('Time to go to BBC News')
 
   await nightmare.end()
 }
