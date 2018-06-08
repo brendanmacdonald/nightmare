@@ -13,9 +13,7 @@ describe('Load a Page', function () {
         it('should load without error', done => {
             nightmare
                 .goto('https://www.bbc.co.uk/')
-                .evaluate(() => {
-                    return document.title;
-                })
+                .title()
                 .end()
                 .then((title) => {
                     expect(title).to.equal('BBC - Home')
