@@ -4,7 +4,9 @@ machine:
     version: 6
 
 
-test:
+version: 2.0
+jobs:
+  build:
   pre:
     - npm i
     - npm run test
