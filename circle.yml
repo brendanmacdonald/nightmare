@@ -1,0 +1,10 @@
+machine:
+  timezone: Europe/London
+  node:
+    version: 6
+
+
+test:
+  pre:
+    - npm i
+    - npm run test
