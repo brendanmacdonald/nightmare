@@ -8,7 +8,7 @@ describe('Mobile Emulation', function () {
     let nightmare = null
     beforeEach(() => {
         nightmare = new Nightmare({
-            show: true
+            show: false
         })
     })
 
