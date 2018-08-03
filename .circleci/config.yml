@@ -1,9 +1,8 @@
 version: 2
 jobs:
-  install:
+  build:
     docker:
       - image: circleci/node:9.10.0
-  build:
     steps:
       - run: npm i
   test:
