@@ -1,12 +1,10 @@
-machine:
-  timezone: Europe/London
-  node:
-    version: 6
-
-
 version: 2.0
 jobs:
   build:
-  pre:
-    - npm i
-    - npm run test
+    steps:
+      - run:
+          name: install
+          command: 'npm i'
+      - run:
+          name: execute
+          command: 'npm run test'
