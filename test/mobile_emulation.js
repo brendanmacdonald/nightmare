@@ -15,7 +15,7 @@ describe('Mobile Emulation', function () {
     describe('/ (Home Page)', () => {
         it('viewport set to iPhone X dimensions', done => {
             nightmare
-            .viewport(375,812)
+            //.viewport(375,812)
                 .goto(obj.baseURL)
                 .title()
                 .end()
